@@ -13,8 +13,11 @@
 #         print(f'You write {user_input}')
 
 age = input("How old are you? ")
-age = int(age)
-if age >= 18:
-    print("access allowed")
-else:
-    print("Access denied")
+try:
+    age = int(age)
+    if age >= 18:
+        print("access allowed")
+    else:
+        print("Access denied")
+except ValueError:
+    print(f'{age} is not a number. Please write a number!')
